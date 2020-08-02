@@ -4,7 +4,7 @@
 ## angular-forms-input-mask
 *Mask your @angular/forms formControl inputs with these directives!*
 
-![CI](https://github.com/kousenlsn/angular-forms-input-mask/workflows/CI/badge.svg?branch=master)
+![CI](https://github.com/kousenlsn/angular-forms-input-mask/workflows/CI/badge.svg?branch=master&event=push)
 
 ### Features :mag_right:
 

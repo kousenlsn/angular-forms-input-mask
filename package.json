@@ -29,7 +29,7 @@
 
     "test:ci": "ng test --browsers ChromeHeadless --no-progress --no-watch",
     "build-lib:ci": "ng build angular-forms-input-masks --prod",
-    "build:cd": "ng build --prod"
+    "build:cd": "ng build --prod --output-path docs --base-href /angular-forms-input-mask/"
   },
   "dependencies": {
     "@angular/animations": "~10.0.5",
