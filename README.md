@@ -5,6 +5,7 @@
 *Mask your @angular/forms formControl inputs with these directives!*
 
 ![CI](https://github.com/kousenlsn/angular-forms-input-mask/workflows/CI/badge.svg?branch=master&event=push)
+![CD](https://github.com/kousenlsn/angular-forms-input-mask/workflows/CD/badge.svg)
 
 ### Features :mag_right:
 
@@ -13,7 +14,7 @@
 - keep a good user experience correctly by tracking **cursor positions** while typing or backspacing naturally;
 - add **any number of masks** to a single input.
 
-#### [Checkout all the possibilities at the demo landpage.](https://github.com/kousenlsn)
+#### [Checkout all the possibilities at the demo landpage.](https://kousenlsn.github.io/angular-forms-input-mask/)
 
 ### Usage :electric_plug:
 

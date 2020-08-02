@@ -7,7 +7,7 @@
     "type": "git",
     "url": "hhttps://github.com/kousenlsn/angular-forms-input-mask"
   },
-  "homepage": "",
+  "homepage": "https://kousenlsn.github.io/angular-forms-input-mask/",
   "keywords": [
     "Angular",
     "AngularForms",
@@ -29,7 +29,8 @@
 
     "test:ci": "ng test --browsers ChromeHeadless --no-progress --no-watch",
     "build-lib:ci": "ng build angular-forms-input-masks --prod",
-    "build:cd": "ng build --prod --output-path docs --base-href /angular-forms-input-mask/"
+    "build:cd": "ng build --prod --output-path docs --base-href /angular-forms-input-mask/",
+    "publish:cd": "cd dist/angular-forms-input-masks && npm publish --access public"
   },
   "dependencies": {
     "@angular/animations": "~10.0.5",

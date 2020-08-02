@@ -7,7 +7,7 @@
     "type" : "git",
     "url" : "hhttps://github.com/kousenlsn/angular-forms-input-mask"
   },
-  "homepage": "",
+  "homepage": "https://kousenlsn.github.io/angular-forms-input-mask/",
   "keywords": ["Angular", "AngularForms", "Mask", "Input", "inputMask", "formControl", "formGroup", "ngControl"],
   "version": "1.0.0",
   "license": "MIT",
