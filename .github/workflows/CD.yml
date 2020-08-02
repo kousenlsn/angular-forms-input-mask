@@ -21,7 +21,7 @@ jobs:
        npm run build-lib:ci
        npm run build:cd
 
-    - name: Deploy to pages
+    - name: Deploy_to_pages
       uses: JamesIves/github-pages-deploy-action@3.5.9
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
