@@ -1,24 +1,86 @@
-# AngularFormsInputMasks
+# angular-forms-input-mask
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
 
-## Code scaffolding
+## angular-forms-input-mask
+*Mask your @angular/forms formControl inputs with these directives!*
 
-Run `ng generate component component-name --project angular-forms-input-masks` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project angular-forms-input-masks`.
-> Note: Don't forget to add `--project angular-forms-input-masks` or else it will be added to the default project in your `angular.json` file. 
+### Features :mag_right:
 
-## Build
+- add to existitng **inputs** or **wrappers** to have it masked **without further needs**;
+- enable **custom validation** over the mask format for existing formControls without trouble;
+- keep a good user experience correctly by tracking **cursor positions** while typing or backspacing naturally;
+- add **any number of masks** to a single input.
 
-Run `ng build angular-forms-input-masks` to build the project. The build artifacts will be stored in the `dist/` directory.
+#####[Checkout all the possibilities at the demo landpage.](https://github.com/kousenlsn)
 
-## Publishing
+### Usage :electric_plug:
 
-After building your library with `ng build angular-forms-input-masks`, go to the dist folder `cd dist/angular-forms-input-masks` and run `npm publish`.
+1. ``npm install angular-forms-input-masks`` or ``yarn add angular-forms-input-masks``
+2. import ``AngularFormsInputMasksModule`` module to your ``appModules`` or module to be used at
+3. declare at any ``input`` of input wrapper the directives to supply your needs.
 
-## Running unit tests
+e.g.
 
-Run `ng test angular-forms-input-masks` to execute the unit tests via [Karma](https://karma-runner.github.io).
+      import { BrowserModule } from '@angular/platform-browser';
+      import { NgModule } from '@angular/core';
+      import { ReactiveFormsModule } from '@angular/forms';
+      import { AngularFormsInputMasksModule } from 'angular-forms-input-masks';
+      import { AppComponent } from './app.component';
 
-## Further help
+      @NgModule({
+        declarations: [
+          AppComponent,
+        ],
+        imports: [
+          BrowserModule,
+          AngularFormsInputMasksModule,
+          ReactiveFormsModule,
+        ],
+        providers: [],
+        bootstrap: [AppComponent]
+      })
+      export class AppModule { }
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+      [...]
+
+      <input formControlName="sampleInput" angularFormsCurrency/>
+      <input [ngControl]="sampleGroup.get('sampleInput')" angularFormsMask="DDD-DDD-DDDD/>
+
+### Options :green_book:
+
+Mask Directive Parameters
+
+- **ngControl**: required to work, either through formControlname or ngControl declaration. Always requires ngControl if the directive is used at an input wrapper;
+- **angularFormsMask**: declaration option, the mask or masks that are to be displayed. ```D```: numbers; ```C```: letters; ```W```: both; All other characters are treated as part of the mask and just displayed. ```e.g. 'DDD.DDD.WW', ['DDD.DD', '(CC) WW - D']```
+- **validateMaskInput**: add validation to formControl, so that the input should match the mask length, else it returns ``invalidLength`` validiation error at the ``ngControl``.
+
+Currency Directive Parameters:
+
+- **ngControl**: required to work, either through formControlname or ngControl declaration. Always requires ngControl if the directive is used at an input wrapper;
+- **prefix**: defaults to ``$``, allows any value or empty;
+- **thousandsSeparator**: defaults to ``white_space``;
+- **decimalSeparator**: defaults to ``.``;
+- **digitsAfterSeparator**: defaults to ``2``;
+- **maxIntegerDigits**: how big tthe value allowed is, defaults to ``8``, or 1 000 000,00;
+- **allowNegatives**: defaults to ``false``;
+- **validateOnInit**: if marked, it will validate the initial value and mask it. In case it is ``null``, will fill the masked value for ``0``. Defaults to ``true``.
+
+
+### Develop :construction_worker:
+
+For running locally:
+
+1. ``npm run build-lib``
+2. ``npm start``
+3. open at: ``localhost:4200``
+
+### Composition :hammer:
+
+- [rxjs](https://rxjs-dev.firebaseapp.com/) <br/>
+- [angular](https://angular.io/) <br/>
+
+### Anything else :
+
+Feel free to contribute, report bugs, or [contact me](https://github.com/kousenlsn) for anything.
+
+![If you want to tip this poor fella](https://github.com/kousenlsn/angular-forms-input-mask/tree/master/src/assets/qr.png)

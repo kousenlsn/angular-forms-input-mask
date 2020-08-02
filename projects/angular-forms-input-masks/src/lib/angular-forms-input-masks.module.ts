@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
-import { AngularFormsInputMasksComponent } from './angular-forms-input-masks.component';
-
-
+import { AngularFormsMaskDirective } from './directives/angular-forms-mask.directive';
+import { AngularFormsCurrencyMaskDirective } from './directives/angular-forms-currency-mask.directive';
 
 @NgModule({
-  declarations: [AngularFormsInputMasksComponent],
-  imports: [
+  declarations: [
+    AngularFormsCurrencyMaskDirective,
+    AngularFormsMaskDirective,
   ],
-  exports: [AngularFormsInputMasksComponent]
+  imports: [],
+  exports: [
+    AngularFormsCurrencyMaskDirective,
+    AngularFormsMaskDirective,
+  ],
 })
 export class AngularFormsInputMasksModule { }
