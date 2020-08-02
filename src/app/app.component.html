@@ -1,0 +1,271 @@
+<div class="page-container" @zoomed>
+  <div class="header">
+    <h1>Angular Forms Input masks!</h1>
+
+    <div class="links">
+      <a href="https://github.com/kousenlsn">> by @kousenlsn</a>
+      <a href="https://github.com/kousenlsn/angular-forms-input-mask">> at Github</a>
+    </div>
+
+    <div class="tips">
+      <img src="https://user-images.githubusercontent.com/14895129/89111770-21def500-d430-11ea-860a-e3982082e530.png">
+      <span>Tips</span>
+    </div>
+  </div>
+
+  <h3>Mask your <span class="highlight">@angular/forms formControl</span> inputs with these directives!</h3>
+
+  <div [formGroup]="demoFormGroup" class="demo-container">
+
+    <div class="demo-column">
+      <h2>Pattern Mask</h2>
+
+      <demo-card title="Default mask">
+        <input #test
+          formControlName="simpleMask"
+          angularFormsMask="WWW WWW - WWW"
+          [validateMaskInput]="true"
+        />
+        <span output>
+          {{demoFormGroup.get('simpleMask').value || ''}}
+        </span>
+
+        <span code>
+          <code>
+            <pre>
+  &lt;input #test
+    formControlName="simpleMask"
+    angularFormsMask="WWW WWW - WWW"
+    [validateMaskInput]="true"
+  />
+            </pre>
+          </code>
+        </span>
+      </demo-card>
+
+      <demo-card title="Validate mask">
+        <input
+          formControlName="validateMask"
+          angularFormsMask="WW.WWW.WWWW"
+          [validateMaskInput]="true"
+        />
+        <span output>
+          {{demoFormGroup.get('validateMask').value || ''}}
+          <br/>
+          <span
+            @slide
+            *ngIf="demoFormGroup.get('validateMask')?.errors"
+          >
+            Validation error.
+          </span>
+        </span>
+
+        <span code>
+          <code>
+            <pre>
+  &lt;input
+    formControlName="validateMask"
+    angularFormsMask="WW.WWW.WWWW"
+    [validateMaskInput]="true"
+  />
+            </pre>
+          </code>
+        </span>
+      </demo-card>
+
+
+      <demo-card title="Multi masks">
+        <input
+          formControlName="multiMask"
+          [angularFormsMask]="['W WW', 'WW WWWW', 'WWW WWWW WWWWW']"
+          [validateMaskInput]="true"
+        />
+        <span output>
+          {{demoFormGroup.get('multiMask').value || ''}}
+        </span>
+
+        <span code>
+          <code>
+            <pre>
+  &lt;input
+    formControlName="multiMask"
+    [angularFormsMask]="['W WW', 'WW WWWW', 'WWW WWWW WWWWW']"
+    [validateMaskInput]="true"
+  />
+            </pre> 
+          </code>
+        </span>
+      </demo-card>
+
+      <demo-card title="Unmasked value return">
+        <input
+          formControlName="unmaskedMask"
+          angularFormsMask="WW.WWW.WWWW"
+          [unmasked]="true"
+          [validateMaskInput]="true"
+        />
+        <span output>
+          {{demoFormGroup.get('unmaskedMask').value || ''}}
+        </span>
+
+        <span code>
+          <code>
+            <pre>
+  &lt;input
+    formControlName="unmaskedMask"
+    angularFormsMask="WW.WWW.WWWW"
+    [unmasked]="true"
+    [validateMaskInput]="true"
+  />
+            </pre> 
+          </code>
+        </span>
+      </demo-card>
+
+    </div>
+
+
+    <div class="demo-column">
+      <h2>Currency Mask</h2>
+
+      <demo-card title="Default mask">
+        <input
+          formControlName="simpleCurrency"
+          angularFormsCurrency
+        />
+        <span output>
+          {{demoFormGroup.get('simpleCurrency').value || 0}}
+        </span>
+
+        <span code>
+          <code>
+            <pre>
+  &lt;input
+    formControlName="simpleCurrency"
+    angularFormsCurrency
+  />
+            </pre>
+          </code>
+        </span>
+      </demo-card>
+
+      <demo-card title="Custom mask display">
+        <input
+          formControlName="customCurrency"
+          prefix="USD"
+          maxIntegerDigits="12"
+          thousandsSeparator=","
+          angularFormsCurrency
+        />
+        <span output>
+          {{demoFormGroup.get('customCurrency').value || 0}}
+        </span>
+
+        <span code>
+          <code>
+            <pre>
+  &lt;input
+    formControlName="customCurrency"
+    prefix="USD"
+    maxIntegerDigits="12"
+    thousandsSeparator=","
+    angularFormsCurrency
+  />
+            </pre> 
+          </code>
+        </span>
+      </demo-card>
+
+      <demo-card title="No init and allow negative">
+        <input
+          formControlName="clearCurrency"
+          [allowNegatives]="true"
+          [validateOnInit]="false"
+          angularFormsCurrency
+        />
+        <span output>
+          {{demoFormGroup.get('clearCurrency').value || 0}}
+        </span>
+
+        <span code>
+          <code>
+            <pre>
+  &lt;input
+    formControlName="clearCurrency"
+    [allowNegatives]="true"
+    [validateOnInit]="false"
+    angularFormsCurrency
+  />
+            </pre>
+          </code>
+        </span>
+      </demo-card>
+
+      <demo-card title="True (custom) currency display">
+        <input
+          formControlName="custom2Currency"
+          prefix="BTC"
+          maxIntegerDigits="1"
+          digitsAfterSeparator="8"
+          angularFormsCurrency
+        />
+        <span output>
+          {{demoFormGroup.get('custom2Currency').value || 0}}
+        </span>
+
+        <span code>
+          <code>
+            <pre>
+  &lt;input
+    formControlName="custom2Currency"
+    prefix="BTC"
+    maxIntegerDigits="1"
+    digitsAfterSeparator="8"
+    angularFormsCurrency
+  />
+            </pre> 
+          </code>
+        </span>
+      </demo-card>
+    </div>
+
+    <div class="demo-column">
+      <h2>Miscelaneous</h2>
+
+      - <strong>Currency mask</strong> Press the separator character at both sides of it to navigate between,.
+      <br/>
+      - <strong>Both masks</strong> Tab between inputs, it autoselects all the input to clear and places cursor at the end.
+      <br/>
+      - <strong>Both masks</strong> Test different cursor positions at the mask, inputing and deleting values.
+
+      <demo-card title="Having a wrapper around the input">
+        <div
+          wrapper
+          [ngControl]="demoFormGroup.get('wrappedMask')"
+          [angularFormsMask]="'WWW WWW - WWW'"
+        >
+          <input formControlName="wrappedMask"/>
+        </div>
+
+        <span output>
+          {{demoFormGroup.get('wrappedMask').value || 0}}
+        </span>
+
+        <span code>
+          <code>
+            <pre>
+  &lt;div
+    wrapper
+    [ngControl]="demoFormGroup.get('wrappedMask')"
+    [angularFormsMask]="'WWW WWW - WWW'"
+  >
+    &lt;input formControlName="wrappedMask"/>
+  &lt;/div>
+            </pre> 
+          </code>
+        </span>
+      </demo-card>
+    </div>
+
+  </div>
+</div>

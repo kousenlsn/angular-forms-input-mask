@@ -25,6 +25,8 @@ export class AngularFormsMaskDirective implements OnDestroy, OnInit {
   }
   /** Add validation so that the input should match the length of the mask, else returns `invalidLength` validation error at the `ngControl`. */
   @Input() validateMaskInput = false;
+  /** Set clear values to the formControl */
+  @Input() unmasked = false;
 
   private previousValue: string;
   private control: AbstractControl;
@@ -74,13 +76,22 @@ export class AngularFormsMaskDirective implements OnDestroy, OnInit {
     this.directiveExists$.unsubscribe();
   }
 
-  private setValue(nextVal: string) {
-    const nextCursorPosition = nextVal
-      ? nextCursorPositionFor(this.nativeEl, this.previousValue, nextVal)
+  private setValue(nextValue: string) {
+    const nextCursorPosition = nextValue
+      ? nextCursorPositionFor(this.nativeEl, this.previousValue, nextValue)
       : cursorPositionFor(this.nativeEl);
 
-    this.previousValue = nextVal;
-    this.control.setValue(nextVal, { emitEvent: false });
+    this.previousValue = nextValue;
+
+    this.control.setValue(nextValue, { emitEvent: false });
+
+    if (this.unmasked && nextValue) {
+      this.control.setValue(unmaskedValueFor(nextValue), {
+        emitEvent: false,
+        emitModelToViewChange: false,
+      });
+    }
+
     setCursorPositionFor(this.nativeEl, nextCursorPosition);
   }
 

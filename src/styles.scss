@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+$black: #3d3d3d;
+$background: #ffffff;
+$gray: #c1c1c1;
+$white: #fff7e3;
+
+* {
+  padding: 0;
+
+  list-style: none;
+  text-decoration: none;
+  color: $black;
+  font-family: 'Courier New', Courier, monospace;
+
+  &::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $gray;
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 50px;
+    padding: 2px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+body {
+  margin: 0;
+  background-color: $background;
+}
+
+h1 {
+  font-family: cursive;
+  font-size: 36px;
+}
+
+h3 {
+  border-bottom: $black 1px solid;
+  border-top: $black 1px solid;
+  padding: 4px;
+}
+
+h2 {
+  border-bottom: $black 2px solid;
+  margin: 8px 0;
+}
+
+input {
+  width: 100%;
+
+  height: 16px;
+  padding: 4px;
+  border: $gray solid 1px;
+
+  font-weight: bold;
+  font-size: 12px;
+
+  &:focus {
+    outline: none;
+    border: $black solid 1px;
+  }
+}

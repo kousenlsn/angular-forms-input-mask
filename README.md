@@ -53,6 +53,7 @@ Mask Directive Parameters
 - **ngControl**: required to work, either through formControlname or ngControl declaration. Always requires ngControl if the directive is used at an input wrapper;
 - **angularFormsMask**: declaration option, the mask or masks that are to be displayed. ```D```: numbers; ```C```: letters; ```W```: both; All other characters are treated as part of the mask and just displayed. ```e.g. 'DDD.DDD.WW', ['DDD.DD', '(CC) WW - D']```
 - **validateMaskInput**: add validation to formControl, so that the input should match the mask length, else it returns ``invalidLength`` validiation error at the ``ngControl``.
+- **unmasked**: set the unmasked value to the formControl instead of the masked one, defaults to ``false``.
 
 Currency Directive Parameters:
 
@@ -83,4 +84,5 @@ For running locally:
 
 Feel free to contribute, report bugs, or [contact me](https://github.com/kousenlsn) for anything.
 
-![If you want to tip this poor fella](https://github.com/kousenlsn/angular-forms-input-mask/tree/master/src/assets/qr.png)
+If you want to tip this poor fella:
+![QR](https://user-images.githubusercontent.com/14895129/89111770-21def500-d430-11ea-860a-e3982082e530.png)

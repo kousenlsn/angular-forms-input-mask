@@ -1,0 +1,48 @@
+@import "src/styles";
+
+.demo-card-container { 
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+
+  .title-container { 
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .input-container { 
+    margin: 4px 0;
+    display: flex;
+  }
+  
+  .output-container { 
+    margin: 4px 0; 
+  }
+  
+  
+  .code-template { 
+    margin: 4px 0;
+  
+    .title {
+      display: flex;
+
+      border: 1px $black solid;
+      cursor: pointer;
+
+      span {
+        padding: 4px;
+
+        &:first-child {
+          flex-grow: 1;
+        }
+      }
+    }
+
+    .content {
+      padding: 4px;
+      border: 1px $black solid;
+      background-color: $gray;
+    }
+  } 
+}
+

@@ -43,7 +43,7 @@ export function unmaskedValueFor(value: string | number): string {
 }
 
 export function hasNonDecimalCharacters(value: string | number): boolean {
-  return !/^\d+$/.test(value.toString());
+  return !/^-?\d+$/.test(value.toString());
 }
 
 export function matchAndReplaceFor(text: string, pattern: string): string {
