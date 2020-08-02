@@ -38,7 +38,6 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         registry-url: https://registry.npmjs.org/
-        persist-credentials: false 
 
     - name: Install dependencies
       run: npm install

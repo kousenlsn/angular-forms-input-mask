@@ -11,7 +11,7 @@
 - keep a good user experience correctly by tracking **cursor positions** while typing or backspacing naturally;
 - add **any number of masks** to a single input.
 
-#### [Checkout all the possibilities at the demo landpage.](https://github.com/kousenlsn)
+#### [Check out all the possibilities at the demo landpage.](https://github.com/kousenlsn)
 
 ### Usage :electric_plug:
 

@@ -14,7 +14,7 @@
 - keep a good user experience correctly by tracking **cursor positions** while typing or backspacing naturally;
 - add **any number of masks** to a single input.
 
-#### [Checkout all the possibilities at the demo landpage.](https://kousenlsn.github.io/angular-forms-input-mask/)
+#### [Check out all the possibilities at the demo landpage.](https://kousenlsn.github.io/angular-forms-input-mask/)
 
 ### Usage :electric_plug:
 
