@@ -85,4 +85,5 @@ For running locally:
 Feel free to contribute, report bugs, or [contact me](https://github.com/kousenlsn) for anything.
 
 If you want to tip this poor fella:
+
 ![QR](https://user-images.githubusercontent.com/14895129/89111770-21def500-d430-11ea-860a-e3982082e530.png)
