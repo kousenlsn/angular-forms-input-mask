@@ -63,4 +63,8 @@ input {
     outline: none;
     border: $black solid 1px;
   }
+
+  &::placeholder {
+    color: #c1c1c1;
+  }
 }

@@ -23,7 +23,8 @@
       <demo-card title="Default mask">
         <input #test
           formControlName="simpleMask"
-          angularFormsMask="WWW WWW - WWW"
+          angularFormsMask="#DD DDD.DDD"
+          placeholder="#23 464.123"
           [validateMaskInput]="true"
         />
         <span output>
@@ -35,7 +36,7 @@
             <pre>
   &lt;input #test
     formControlName="simpleMask"
-    angularFormsMask="WWW WWW - WWW"
+    angularFormsMask="#DD DDD.DDD"
     [validateMaskInput]="true"
   />
             </pre>
@@ -47,6 +48,7 @@
         <input
           formControlName="validateMask"
           angularFormsMask="WW.WWW.WWWW"
+          placeholder="AB.CD5.eee"
           [validateMaskInput]="true"
         />
         <span output>
@@ -78,6 +80,7 @@
         <input
           formControlName="multiMask"
           [angularFormsMask]="['W WW', 'WW WWWW', 'WWW WWWW WWWWW']"
+          placeholder="1 AB"
           [validateMaskInput]="true"
         />
         <span output>
@@ -100,7 +103,8 @@
       <demo-card title="Unmasked value return">
         <input
           formControlName="unmaskedMask"
-          angularFormsMask="WW.WWW.WWWW"
+          angularFormsMask="CC - CC.WW"
+          placeholder="XY - AB.2e"
           [unmasked]="true"
           [validateMaskInput]="true"
         />
@@ -113,7 +117,7 @@
             <pre>
   &lt;input
     formControlName="unmaskedMask"
-    angularFormsMask="WW.WWW.WWWW"
+    angularFormsMask="CC - CC.WW"
     [unmasked]="true"
     [validateMaskInput]="true"
   />

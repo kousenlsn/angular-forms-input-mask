@@ -17,7 +17,12 @@
     "ng": "ng",
     "build": "ng build",
     "start": "ng serve",
-    "build-lib": "ng build angular-forms-input-masks --watch"
+    "build-lib": "ng build angular-forms-input-masks --watch",
+    "test": "ng test --browsers ChromeHeadless",
+
+    "test-ci": "ng test --browsers ChromeHeadless --no-watch --no-progress",
+    "build-lib-ci": "ng build angular-forms-input-masks --prod",
+    "build-cd": "ng build --prod"
   },
 
   "dependencies": {
