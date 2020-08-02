@@ -1,30 +1,35 @@
 {
   "name": "angular-forms-input-mask",
   "private": true,
-
   "author": "kousenlsn",
   "description": "Mask your @angular/forms formControl inputs with these directives!",
   "repository": {
-    "type" : "git",
-    "url" : "hhttps://github.com/kousenlsn/angular-forms-input-mask"
+    "type": "git",
+    "url": "hhttps://github.com/kousenlsn/angular-forms-input-mask"
   },
   "homepage": "",
-  "keywords": ["Angular", "AngularForms", "Mask", "Input", "inputMask", "formControl", "formGroup", "ngControl"],
+  "keywords": [
+    "Angular",
+    "AngularForms",
+    "Mask",
+    "Input",
+    "inputMask",
+    "formControl",
+    "formGroup",
+    "ngControl"
+  ],
   "version": "1.0.0",
   "license": "MIT",
-
   "scripts": {
     "ng": "ng",
     "build": "ng build",
     "start": "ng serve",
     "build-lib": "ng build angular-forms-input-masks --watch",
     "test": "ng test --browsers ChromeHeadless",
-
     "test-ci": "ng test --browsers ChromeHeadless --no-watch --no-progress",
     "build-lib-ci": "ng build angular-forms-input-masks --prod",
     "build-cd": "ng build --prod"
   },
-
   "dependencies": {
     "@angular/animations": "~10.0.5",
     "@angular/common": "~10.0.5",

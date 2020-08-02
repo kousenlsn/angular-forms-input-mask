@@ -1,13 +1,14 @@
 @import "src/styles";
 
 .page-container {
-  margin: 16px;
+  margin: 16px 100px;
   box-shadow: #00000024 4px 4px 4px;
   background-color: $white;
   padding: 16px;
 
   .header {
     display: flex;
+    flex-wrap: wrap;
 
     h1 {
       flex-grow: 1;
@@ -65,4 +66,16 @@
 .highlight {
   background-color: $gray;
   border-radius: 5px;
+}
+
+@media screen and (max-width: $breakpoint-small-web) {
+  .page-container {
+    margin: 16px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+  .page-container {
+    margin: 0;
+  }
 }
